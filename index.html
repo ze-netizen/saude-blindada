@@ -135,20 +135,21 @@
       margin: 0 auto 40px;
     }
 
+    /* ===== PREÇO EM AMARELO BRILHANTE ===== */
     .price-box {
-      background: #fff8e1;
-      color: #5d4037;
-      display: inline-block;
-      padding: 10px 24px;
-      border-radius: 12px;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 15px 0;
-      border: 1px solid #ffe082;
-      box-shadow: 0 3px 10px rgba(255, 224, 130, 0.2);
+      background: transparent;
+      color: #FFC107; /* ✨ AMARELO BRILHANTE */
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0 4px;
+      margin: 0 4px;
+      border-radius: 4px;
+      display: inline;
+      box-shadow: none;
+      border: none;
     }
 
-    /* ===== ESTILO UNIFICADO PARA TODOS OS CARDS ===== */
+    /* ===== ANIMAÇÃO UNIFICADA PARA TODOS OS CARDS ===== */
     .content-item,
     .card {
       transition: all 0.35s ease;
@@ -277,6 +278,9 @@
         max-width: 320px;
         margin: 25px auto;
       }
+      .price-box {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -317,7 +321,7 @@
       <h2 class="section-title">O que você vai descobrir no e-book</h2>
       <p class="section-subtitle">Mais de 50 páginas com +40 receitas seguras e protocolos responsáveis.</p>
 
-      <!-- CAPA DO EBOOK (caminho relativo) -->
+      <!-- CAPA DO EBOOK -->
       <div class="ebook-cover">
         <img src="capa-ebook.png" alt="Capa do e-book Saúde Blindada">
       </div>
