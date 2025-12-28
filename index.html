@@ -1,291 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="SAÚDE BLINDADA: O Guia Prático com +40 receitas seguras, protocolos de segurança e cuidados por sistema. Autor: Nathan Gomes Araujo. Preço promocional por tempo limitado!" />
+  <title>SAÚDE BLINDADA – Guia de Receitas e Cuidados Naturais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --secondary: #e8e0d0;
+      --accent: #FFD54F; /* Amarelo claro */
+      --light: #ffffff;
+      --dark: #2d2d2d;
+      --gray: #7a7a7a;
+      --shadow-light: 0 4px 12px rgba(0,0,0,0.04);
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+      --urgent: #d32f2f;
+    }
 
-<title>Saúde Blindada – Guia Natural Seguro</title>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-:root{
-  --green:#2e7d32;
-  --dark:#1b1b1b;
-  --accent:#FFD54F;
-  --gray:#666;
-  --bg:#f4f7f4;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafdf8;
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box}
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--dark);
-  line-height:1.6;
-}
+    .container {
+      width: min(90%, 1200px);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* ================= HERO ================= */
-header{
-  background:linear-gradient(135deg,#1f4d1f,#2e7d32);
-  color:white;
-  padding:120px 20px;
-}
+    /* ===== FAIXA DE SOLUÇÃO ===== */
+    .solution-banner {
+      background: var(--urgent);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
 
-.hero{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:60px;
-  align-items:center;
-}
+    /* ===== HERO ===== */
+    header {
+      background: linear-gradient(135deg, #2c662c 0%, #1f4d1f 100%);
+      color: white;
+      padding: 60px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero h1{
-  font-size:2.8rem;
-  margin-bottom:25px;
-}
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      transform: rotate(30deg);
+      z-index: 0;
+    }
 
-.hero p{
-  font-size:1.15rem;
-  max-width:520px;
-}
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
 
-/* BOTÃO */
-.btn{
-  display:inline-block;
-  margin-top:35px;
-  padding:18px 48px;
-  background:var(--accent);
-  color:#222;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:50px;
-  transition:.3s;
-}
+    header p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
+    }
 
-.btn:hover{
-  transform:translateY(-4px) scale(1.04);
-  box-shadow:0 16px 35px rgba(0,0,0,.35);
-}
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #2d2d2d;
+      font-weight: 600;
+      padding: 16px 42px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.15rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 2px solid var(--accent);
+      position: relative;
+      z-index: 2;
+    }
 
-/* IMAGEM DO LIVRO */
-.book{
-  text-align:center;
-}
+    .btn:hover {
+      background: #fbe9b1;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 213, 79, 0.4);
+    }
 
-.book img{
-  max-width:380px;
-  width:100%;
-  border-radius:26px;
-  box-shadow:0 35px 80px rgba(0,0,0,.45);
-}
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 80px 0;
+    }
 
-/* ================= SEÇÕES ================= */
-section{
-  padding:100px 20px;
-}
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-}
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
 
-.center{text-align:center}
+    .price-box {
+      background: #fff8e1;
+      color: #5d4037;
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 12px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 15px 0;
+      border: 1px solid #ffe082;
+      box-shadow: 0 3px 10px rgba(255, 224, 130, 0.2);
+    }
 
-.alt{background:#ffffff}
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid var(--primary);
+    }
 
-/* ================= GRID & CARDS ================= */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:60px;
-}
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
 
-.card{
-  background:rgba(255,255,255,.95);
-  padding:34px;
-  border-radius:22px;
-  box-shadow:0 18px 40px rgba(0,0,0,.1);
-  transform:translateY(40px);
-  opacity:0;
-  animation:fadeUp .8s ease forwards;
-}
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
 
-.card:nth-child(2){animation-delay:.15s}
-.card:nth-child(3){animation-delay:.3s}
-.card:nth-child(4){animation-delay:.45s}
-.card:nth-child(5){animation-delay:.6s}
-.card:nth-child(6){animation-delay:.75s}
+    /* ===== CONTEÚDO COM TÍTULOS E DESCRITIVOS ===== */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
 
-.card:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 28px 60px rgba(0,0,0,.2);
-}
+    .content-item {
+      padding: 20px;
+      background: #f9f9f9;
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+    }
 
-.card h3{
-  color:var(--green);
-  margin-bottom:14px;
-}
+    .content-item h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
 
-.card p{
-  font-size:.95rem;
-  color:#333;
-}
+    .content-item p {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
 
-.icon{
-  font-size:2.2rem;
-  margin-bottom:15px;
-}
+    .content-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
 
-/* ================= PREÇO ================= */
-.price{
-  font-size:2.6rem;
-  font-weight:bold;
-  color:var(--green);
-  margin:30px 0 10px;
-}
+    /* ===== ALERTS ===== */
+    .legal-alert {
+      background: #fff9e6;
+      border-left: 4px solid #ffc107;
+      padding: 22px;
+      border-radius: 10px;
+      margin: 50px auto;
+      max-width: 800px;
+      font-weight: 500;
+      text-align: center;
+      color: #5a4a00;
+    }
 
-.small{
-  font-size:.9rem;
-  color:var(--gray);
-}
+    /* ===== CTA FINAL ===== */
+    #checkout {
+      background: linear-gradient(135deg, var(--primary) 0%, #1d5a1d 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-/* ================= ALERTA ================= */
-.alert{
-  background:#fff3cd;
-  border-left:6px solid #fbc02d;
-  padding:30px;
-  border-radius:18px;
-  max-width:900px;
-  margin:60px auto;
-}
+    #checkout .section-title,
+    #checkout .section-subtitle,
+    #checkout p {
+      color: white;
+    }
 
-/* ================= FOOTER ================= */
-footer{
-  background:#1f4d1f;
-  color:white;
-  text-align:center;
-  padding:60px 20px;
-}
-
-@keyframes fadeUp{
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .hero p{
-    margin:auto;
-  }
-}
-</style>
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.0rem;
+      }
+      header p {
+        font-size: 1.05rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .btn {
+        padding: 14px 30px;
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- ================= HERO ================= -->
-<header>
-  <div class="hero">
-    <div>
-      <h1>Saúde Blindada – Guia Natural Seguro</h1>
-      <p>
-        Aprenda como usar receitas naturais com consciência,
-        evitando erros silenciosos que colocam sua saúde em risco.
+  <!-- FAIXA DE SOLUÇÃO -->
+  <div class="solution-banner">
+    Pare de arriscar sua saúde com receitas caseiras sem orientação! Descubra o método seguro e natural para fortalecer seu corpo com responsabilidade.
+  </div>
+
+  <!-- HERO -->
+  <header>
+    <div class="container">
+      <h1>SAÚDE BLINDADA: O Guia Prático de Receitas e Cuidados Naturais</h1>
+      <p>Fortaleça sua saúde de forma natural, segura e consciente. Autor: Nathan Gomes Araujo</p>
+      
+      <div style="background: #fff; color: var(--urgent); display: inline-block; padding: 6px 20px; border-radius: 30px; font-weight: bold; margin: 10px 0; font-size: 0.95rem;">
+        ⏳ Preço promocional por tempo limitado!
+      </div>
+      
+      <a href="https://pay.hotmart.com/T103484050L" class="btn">Comprar Agora</a>
+    </div>
+  </header>
+
+  <!-- PROBLEMA -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">O problema não é o natural. É o uso errado.</h2>
+      <p class="section-subtitle">
+        Chás, garrafadas e receitas caseiras podem <strong>proteger sua saúde</strong> — ou colocá-la em risco se usados sem critério, dosagem ou orientação.
       </p>
-
-      <a class="btn" href="https://pay.hotmart.com/T103484050L">
-        Quero Usar com Segurança
-      </a>
     </div>
+  </section>
 
-    <!-- IMAGEM DO LIVRO -->
-    <div class="book">
-      <img src="capa-ebook.png" alt="Capa do e-book Saúde Blindada">
+  <!-- O QUE VOCÊ VAI APRENDER -->
+  <section style="background: var(--secondary);">
+    <div class="container">
+      <h2 class="section-title">O que você vai descobrir no e-book</h2>
+      <p class="section-subtitle">Mais de 50 páginas com +40 receitas seguras e protocolos responsáveis.</p>
+      
+      <div class="content-grid">
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?herbs,safety" alt="Protocolos de segurança">
+          <h3>Protocolos de Segurança e Boas Práticas</h3>
+          <p>Aprenda a usar plantas medicinais com responsabilidade: dosagens, ciclos, contraindicações e sinais de alerta.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?lungs,respiratory" alt="Sistema respiratório">
+          <h3>Sistema Respiratório</h3>
+          <p>Receitas naturais para fortalecer as vias respiratórias, aliviar congestão e apoiar a recuperação de infecções comuns.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?digestion,stomach" alt="Sistema digestivo">
+          <h3>Sistema Digestivo</h3>
+          <p>Soluções naturais para equilibrar a digestão, aliviar desconfortos e reidratar com segurança, seguindo padrões internacionais.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?heart,cardio" alt="Sistema cardiovascular">
+          <h3>Sistema Cardiovascular</h3>
+          <p>Estratégias naturais para apoiar a saúde do coração, pressão arterial e circulação sanguínea com base em evidências.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?brain,nervous" alt="Sistema nervoso">
+          <h3>Sistema Nervoso</h3>
+          <p>Técnicas e preparos naturais para reduz. estresse, melhorar o sono, aliviar dores de cabeça e promover equilíbrio emocional.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?skin,dermatology" alt="Saúde da pele">
+          <h3>Saúde da Pele</h3>
+          <p>Cuidados tópicos naturais para acne, oleosidade, hidratação profunda e redução de olheiras e inchaço.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?hair,scalp" alt="Saúde capilar">
+          <h3>Saúde Capilar</h3>
+          <p>Preparações para fortalecer o couro cabeludo, reduzir a queda e manter os fios saudáveis com ingredientes naturais.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?joint,inflammation" alt="Saúde das articulações">
+          <h3>Saúde das Articulações</h3>
+          <p>Abordagens naturais para reduzir inflamação, aliviar dores articulares e musculares, e promover recuperação pós-esforço.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?woman,hormone,menstrual" alt="Saúde hormonal feminina">
+          <h3>Saúde Hormonal Feminina</h3>
+          <p>Suporte natural para o ciclo menstrual, TPM, menopausa e cuidados íntimos com segurança e respeito ao corpo feminino.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?man,hormone,stress" alt="Saúde hormonal masculina">
+          <h3>Saúde Hormonal Masculina</h3>
+          <p>Receitas para vitalidade, equilíbrio energético, saúde da próstata e manejo do estresse no dia a dia do homem moderno.</p>
+        </div>
+        <div class="content-item">
+          <img src="https://source.unsplash.com/300x300/?kidney,water,health" alt="Saúde renal">
+          <h3>Saúde Renal</h3>
+          <p>Preparações suaves para apoiar a função renal, promover a eliminação de toxinas e manter o equilíbrio hídrico com segurança.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<!-- ================= PROBLEMA ================= -->
-<section class="container center">
-  <h2>O problema não é o natural. É o uso errado.</h2>
-  <p>
-    Chás, receitas caseiras e dicas populares podem ajudar —
-    ou causar problemas quando usadas sem critério.
-  </p>
-</section>
-
-<!-- ================= CONTEÚDO ================= -->
-<section class="alt">
-  <div class="container">
-    <h2 class="center">O que você vai aprender</h2>
-
-    <div class="grid">
-      <div class="card">
-        <div class="icon">🛑</div>
-        <h3>Limites claros</h3>
-        <p>Quando usar, quando parar e quando NÃO usar.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🌿</div>
-        <h3>Receitas com propósito</h3>
-        <p>Nada genérico ou perigoso.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚠️</div>
-        <h3>Erros comuns</h3>
-        <p>Excessos, misturas erradas e mitos populares.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🧠</div>
-        <h3>Consciência corporal</h3>
-        <p>Aprenda a reconhecer sinais de alerta.</p>
+  <!-- DIFERENCIAL -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Por que este guia é diferente?</h2>
+      <p class="section-subtitle">Não é só “receitas caseiras”. É ciência, segurança e consciência aplicadas à natureza.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 30px;">
+        <div class="card">
+          <h3>Explica o “porquê”</h3>
+          <p>Você não só aplica — entende como e por que cada receita funciona.</p>
+        </div>
+        <div class="card">
+          <h3>Alertas de segurança</h3>
+          <p>Mostramos quando NÃO usar, interações medicamentosas e riscos reais — sem sensacionalismo.</p>
+        </div>
+        <div class="card">
+          <h3>Conteúdo educativo</h3>
+          <p>Desenvolvido para ensinar, não apenas vender. Você sai mais informado.</p>
+        </div>
+        <div class="card">
+          <h3>Responsabilidade acima de tudo</h3>
+          <p>Foco em prevenção e bem-estar — nunca em substituição médica.</p>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="checkout">
+    <div class="container">
+      <h2 class="section-title">Não perca esta oportunidade!</h2>
+      
+      <p>Por apenas <strong class="price-box">R$ 15,99</strong>, você leva o e-book completo com <strong>+40 receitas seguras</strong> e protocolos responsáveis.</p>
+      
+      <div style="background: #fff; color: var(--urgent); display: inline-block; padding: 8px 24px; border-radius: 30px; font-weight: bold; margin: 20px 0; font-size: 1rem;">
+        🕒 Preço promocional válido por tempo limitado!
+      </div>
+      
+      <a href="https://pay.hotmart.com/T103484050L" class="btn" style="margin-top: 20px;">Garanta Seu Acesso Agora</a>
+    </div>
+  </section>
+
+  <!-- AVISO LEGAL -->
+  <div class="legal-alert">
+    ⚠️ Este conteúdo é informativo e educativo. Não substitui diagnóstico, tratamento ou orientação médica. Consulte sempre seu profissional de saúde.
   </div>
-</section>
-
-<!-- ================= SISTEMAS ================= -->
-<section class="container">
-  <h2 class="center">Sistemas do corpo abordados</h2>
-
-  <div class="grid">
-    <div class="card"><h3>Respiratório</h3><p>Vias aéreas e imunidade.</p></div>
-    <div class="card"><h3>Digestivo</h3><p>Digestão e intestino.</p></div>
-    <div class="card"><h3>Nervoso</h3><p>Estresse, sono e ansiedade.</p></div>
-    <div class="card"><h3>Cardiovascular</h3><p>Circulação e pressão.</p></div>
-    <div class="card"><h3>Hormonal Feminino</h3><p>TPM, ciclo e menopausa.</p></div>
-    <div class="card"><h3>Hormonal Masculino</h3><p>Energia e vitalidade.</p></div>
-  </div>
-</section>
-
-<!-- ================= PREÇO ================= -->
-<section class="alt center">
-  <h2>Quanto vale evitar erros com sua saúde?</h2>
-
-  <div class="price">R$ 15,99</div>
-  <div class="small">Acesso imediato • Conteúdo digital • Uso vitalício</div>
-
-  <a class="btn" href="https://pay.hotmart.com/T103484050L">
-    Quero Acessar Agora
-  </a>
-</section>
-
-<div class="alert">
-  ⚠️ Conteúdo educativo. Não substitui diagnóstico ou orientação médica.
-</div>
-
-<footer>
-  <p>© Saúde Blindada — Informação clara, sem promessas falsas</p>
-</footer>
 
 </body>
 </html>
